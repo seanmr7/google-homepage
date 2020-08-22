@@ -1,41 +1,122 @@
+<html>
 <head>
     <style>
-    .logo{
-        text-align: center;
-    }
     .navigation{
         list-style-type: none;
-        font-size: 13px;
+        font-size: 12px;
+        margin: 0;
+        margin-left: -30px;
+        padding: 0;
+    }
+    .nav-image{
+        width: 15px
+    }
+    
+    .li-left{
+        display: block;
         float: left;
         padding: 10px;
     }
-    li{
-        float: left;
+    .li-right{
+        display: block;
+        float: right;
         padding: 10px;
     }
-    #search-bar{
+    li:hover{
+        text-decoration: underline;
+    }
+    
+    .search-bar{
+        display: flex;
+        height: 55px;
+        width: auto;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .search-bar input[type=text]{
+        float: left;
         background-color: white;
-        border-color: #0000003b;
-        border-width: .1px;
-        border-radius: 5px;
+        border-width: 1px;
         border-style: solid;
+        border-radius: 50px;
+        padding: 5px 5px 5px 25px;
+        width: 40em;
+        height: 4em;
+    }
+    #search-button{
+        position: relative;
+        padding: 20px;
+        text-align: center;
+
+    }
+    .button{
+        background-color: #a9a9a94d;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    .logo{
+        float: auto;
+        text-align: center;
+        padding: 20px;
+        margin: 200px auto 0px auto;
+    }
+    #footer{
+        position: absolute;
+        bottom: 0;
+        background-color:#a9a9a94d;
+        list-style-type: none;
+        font-size: 12px;
+        margin: 0;
+        margin-left: -30px;
+        padding-right: 22px;
+        width: 100%;
     }
     </style>
 </head>
-<header>
-    <ul class="navigation">
-        <li>About</li>
-        <li>Store</li>
-    </ul>
-</header>
+
 <body>
+    <div class="navigation">
+        <ul>
+            <li class="li-left">About</li>
+            <li class="li-left">Store</li>
+            <li class="li-right"> <img class="nav-image"src="https://static.thenounproject.com/png/198752-200.png"></li>
+            <li class="li-right">Images</li>
+            <li class="li-right">Gmail</li>
+        </ul>
+    </div>
+<br>
     <div class="logo">
         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
     </div>
-    <div id="search-bar" class="logo">
-        <br>
+
+    <div class="search-bar"> 
+        <form>
+             <input type="text" placeholder="">
+        </form>
+    </div>
+    <div id="search-button">
+            <button class="button">Google Search</button>
+            <button class="button">I'm Feeling Lucky</button>
+    </div>
+    <div id="footer">
+        <ul>
+            <li class="li-left" >Advertising</li>
+            <li class="li-left" >Business</li>
+            <li class="li-left" >How Search Works</li>
+            <li class="li-right">Settings</li>
+            <li class="li-right">Terms</li>
+            <li class="li-right">Privacy</li>
+        </ul>
     </div>
 </body>
-<footer>
 
-</footer>
+</html>
